@@ -1,0 +1,131 @@
+.rodape__linha{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.rodape__linha:last-child{
+    border-top: 1.5px solid var(--cor-destaque-secundario);
+    padding-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+}
+
+.rodape__coluna_list-cartao{
+    display: inline-grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 16px;
+    list-style-type: none;
+}
+
+.rodape__coluna_list-redes-sociais{
+    display: inline-grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 8px;
+    list-style-type: none;
+}
+
+.rodape{
+    padding: 60px 12.5%;
+    background-color: var(--cor-links);
+    margin: 0 auto;
+}
+
+.rodape__coluna_titulo{
+    font-family: var(--fonte-texto);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--cor-texto);
+    margin-bottom: 16px;
+}
+
+.rodape__coluna_logo img{
+    width: 79.61px;
+    height: 48px;
+    margin-bottom: 24px;
+}
+
+.rodape__coluna_logo_texto{
+    font-family: var(--fonte-texto);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+    color: var(--cor-destaque-secundario);
+}
+
+.rodape__coluna_list{
+    list-style-type: none;
+    font-family: var(--fonte-texto);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+    color: var(--cor-texto);
+}
+
+.rodape__coluna_list_item a{
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+
+.rodape__coluna_list_item{
+    margin-bottom: 8px;
+}
+
+.rodape__coluna_list_item:last-child{
+    margin-bottom: 0;
+}
+
+.autor{
+    text-align: center;
+}
+
+.autor p{
+    font-family: var(--fonte-texto);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+    color: var(--cor-links);
+    padding: 35.5px 0;
+    
+}
+@media (width <= 768px){
+    .rodape__linha:first-child{
+        
+        grid-template-areas: 
+        "logo logo logo"
+        "funcionamento institucional informacoes";
+        justify-content: space-between;
+        column-gap: 68px;
+    }
+
+    .rodape__coluna_logo{
+        grid-area: logo;
+        text-align: center;
+    }
+
+    .rodape__linha:first-child .rodape__coluna:nth-child(2){
+        grid-area: funcionamento;
+    }
+
+    .rodape__linha:first-child .rodape__coluna:nth-child(3){
+        grid-area: institucional;
+    }
+
+    .rodape__linha:first-child .rodape__coluna:last-child{
+        grid-area: informacoes;
+    }
+
+    .rodape__linha:first-child .rodape__coluna_logo{
+        border-bottom: 1.5px solid var(--cor-destaque-secundario);
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+    }
+
+    .rodape__linha:last-child{
+        border: none;
+        padding-top: 32px;
+    }
+}
